@@ -1,7 +1,7 @@
 package queMePongo;
 
-import queMePongo.entity.Prenda;
-import queMePongo.entity.Usuario;
+import queMePongo.entity.model.Prenda;
+import queMePongo.entity.model.Usuario;
 import queMePongo.exceptions.InvalidPrendaException;
 
 public class Negocio {

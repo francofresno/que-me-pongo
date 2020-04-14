@@ -1,4 +1,4 @@
-package queMePongo.entity;
+package queMePongo.entity.model;
 
 import queMePongo.constants.CategoriaPrenda;
 import queMePongo.constants.Color;
