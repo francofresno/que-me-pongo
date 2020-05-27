@@ -4,21 +4,17 @@ import queMePongo.entity.model.Prenda;
 import queMePongo.entity.model.Usuario;
 import queMePongo.exceptions.InvalidPrendaException;
 
-public class Negocio {
+public class GeneradorPrendas {
 
-	private Usuario loggedUser;
+	private Usuario currentUser;
 
-	public Usuario getLoggedUser() {
-		return loggedUser;
-	}
-
-	public void setLoggedUser(Usuario loggedUser) {
-		this.loggedUser = loggedUser;
+	public GeneradorPrendas(Usuario currentUser) {
+		this.currentUser = currentUser;
 	}
 
 	public void guardarNuevaPrenda(Prenda prenda) throws InvalidPrendaException {
 		validarPrenda(prenda);
-		loggedUser.guardarEnGuardarropa(prenda);
+		currentUser.guardarEnGuardarropa(prenda);
 	}
 
 	private void validarPrenda(Prenda prenda) throws InvalidPrendaException {

@@ -17,6 +17,10 @@ public class Usuario {
 	public void guardarEnGuardarropa(Prenda prenda) {
 		guardarropa.add(prenda);
 	}
+	
+	public List<Prenda> getGuardarropa() {
+		return this.guardarropa;
+	}
 
 	public String getUsername() {
 		return username;
