@@ -69,4 +69,24 @@ public class Prenda {
 		return primColor != null;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+
+		if (o == this) {
+			return true;
+		}
+
+		if (!(o instanceof Prenda)) {
+			return false;
+		}
+
+		Prenda prendaObj = (Prenda) o;
+		
+		return this.tipo.equals(prendaObj.getTipo()) 
+				&& this.categoria.equals(prendaObj.getCategoria()) 
+				&& this.material.equals(prendaObj.getMaterial())
+				&& this.primColor.equals(prendaObj.getPrimColor())
+				&& this.secColor.equals(prendaObj.getSecColor());
+	}
+	
 }

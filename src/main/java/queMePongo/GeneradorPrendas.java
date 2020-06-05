@@ -1,20 +1,15 @@
 package queMePongo;
 
+import queMePongo.entity.model.Guardarropa;
 import queMePongo.entity.model.Prenda;
 import queMePongo.entity.model.Usuario;
 import queMePongo.exceptions.InvalidPrendaException;
 
 public class GeneradorPrendas {
 
-	private Usuario currentUser;
-
-	public GeneradorPrendas(Usuario currentUser) {
-		this.currentUser = currentUser;
-	}
-
-	public void guardarNuevaPrenda(Prenda prenda) throws InvalidPrendaException {
+	public void guardarNuevaPrenda(Prenda prenda, Guardarropa guardarropa) throws InvalidPrendaException {
 		validarPrenda(prenda);
-		currentUser.guardarEnGuardarropa(prenda);
+		guardarropa.guardarEnGuardarropa(prenda);
 	}
 
 	private void validarPrenda(Prenda prenda) throws InvalidPrendaException {
